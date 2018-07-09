@@ -1,0 +1,336 @@
+.container {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: 100px 75px repeat(20, 1fr) 75px;
+	height: 500vh;
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-top: -10px;
+	padding: 0px;
+	background-image: url('black-and-white-lights-abstract-curves.jpg');
+}
+.header {
+	grid-column: 1 / -1;
+	grid-row: 1 / span 2;
+	background-color: black;
+  color: white;
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	z-index: 9999;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 60px 40px 40px 35px;
+}
+.header1 {
+	grid-row: 1;
+	grid-column: 2;
+	display: flex;
+	white-space: nowrap;
+	align-items: center;
+	justify-content: center;
+	padding-top: 15px;
+}
+.header2 {
+	grid-row: 2;
+	grid-column: 2;
+	display: flex;
+	white-space: nowrap;
+	align-items: center;
+	justify-content: center;
+}
+.header3 {
+	grid-row: 3;
+	grid-column: 2;
+	display: flex;
+	white-space: nowrap;
+	align-items: center;
+	justify-content: center;
+	font-style: oblique;
+}
+.header4 {
+	grid-row: 4;
+	grid-column: 2 / -2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+ul {list-style: none;padding: 0px;margin: 0px;}
+ul li {display: block;position: relative;float: left;}
+li ul {display: none;}
+ul li a {display: block;background: transparent;padding: 5px 45px 5px 45px;
+				 white-space: nowrap;color: #fff;}
+ul li a:hover {background: #333;/*border: 1px solid #000;*/}
+li:hover ul {display: block; position: absolute;}
+li:hover li {float: none;}
+li:hover a {background: #555; text-decoration: none;}
+li:hover li a:hover {background: #000;}
+#drop-nav li ul li {border-top: 0px;}
+
+.examples {
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0.5);
+	position: sticky;
+	position: -webkit-sticky;
+	z-index: 1000;
+	top: 180px;
+	height: 60vh;
+	width: 100%;
+	border: 2px solid #555;
+	color: #ccc;
+	display: grid;
+	grid-auto-columns: 0px;
+	grid-column-gap: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-top: 10px;
+}
+.examples1 {
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 10% 10% auto;
+}
+.examples2 {
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 10% 10% auto;
+}
+.boundary1{
+	grid-column: 2 / -2;
+	grid-row-start: 3;
+	grid-row-end: 8;
+	display: flex;
+	margin-bottom: 10px;
+	padding: 0px;
+}
+
+.boundary2{
+	grid-column: 2 / -2;
+	grid-row-start: 8;
+	grid-row-end: 13;
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.boundary3{
+	grid-column: 2 / -2;
+	grid-row-start:13;
+	grid-row-end: 18;
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.boundary4{
+	grid-column: 2 / -2;
+	grid-row-start: 18;
+	grid-row-end: 23;
+	display: flex;
+}
+
+.exampleHead {
+	display: flex;
+	grid-row: 1;
+	grid-column: 1 / -1;
+	justify-content: center;
+	align-content: center;
+	padding: 0px;
+	margin: 0px;
+	font-size: 200%;
+	font-weight: bold;
+}
+
+.title {
+	display: flex;
+	align-content: end;
+	justify-content: center;
+	font-style: italic;
+	font-weight: bold;
+}
+#title1 {
+	grid-row: 2;
+	grid-column: 1;
+}
+#title2 {
+	grid-row: 2;
+	grid-column: 2;
+}
+#title3 {
+	grid-row: 2;
+	grid-column-end: -1;
+}
+
+.about {
+	grid-row-end: -1;
+	display: flex;
+	background-position: center;
+	background-size: cover;
+	justify-content: center;
+	align-items: center;
+	color: transparent;
+	white-space: pre-wrap;
+	transition: all ease-in-out 300ms;
+}
+.about:hover {
+	font-weight: bold;
+	color: white;
+	background-position: 60% 50%;
+}
+.about1 {
+	grid-column: 1;
+}
+.about2 {
+	grid-column: 2;
+}
+.about3 {
+	grid-column-end: -1;
+}
+.quote {
+	font-style: italic;
+}
+
+#about1 {
+	background-image: url('eng_team.jpeg');
+}
+#about1:hover {
+	background-image:
+		linear-gradient(
+			rgba(0, 0, 0, .6),
+			rgba(0, 0, 0, .6)
+		),
+		url('eng_team.jpeg');
+}
+
+#about2 {
+	background-image: url('collaboration.jpg');
+}
+#about2:hover {
+	background-image:
+		linear-gradient(
+			rgba(0, 0, 0, .6),
+			rgba(0, 0, 0, .6)
+		),
+		url('collaboration.jpg');
+}
+
+#about3 {
+	background-image: url('process_design.jpg');
+}
+#about3:hover {
+	background-image:
+		linear-gradient(
+			rgba(0, 0, 0, .6),
+			rgba(0, 0, 0, .6)
+		),
+		url('process_design.jpg');
+}
+
+#about4 {
+	background-image: url('schematic.jpg');
+}
+#about4:hover {
+	background-image:
+		linear-gradient(
+			rgba(0, 0, 0, .6),
+			rgba(0, 0, 0, .6)
+		),
+		url('schematic.jpg');
+}
+
+#about5 {
+	background-image: url('optimization.jpeg');
+}
+#about5:hover {
+	background-image:
+		linear-gradient(
+			rgba(0, 0, 0, .6),
+			rgba(0, 0, 0, .6)
+		),
+		url('optimization.jpeg');
+}
+
+#about6 {
+	background-image: url('factory.jpg');
+}
+#about6:hover {
+	background-image:
+		linear-gradient(
+			rgba(0, 0, 0, .6),
+			rgba(0, 0, 0, .6)
+		),
+		url('factory.jpg');
+}
+
+#about7 {
+	background-image: url('engineering_team.jpg');
+}
+#about7:hover {
+	background-image:
+		linear-gradient(
+			rgba(0, 0, 0, .6),
+			rgba(0, 0, 0, .6)
+		),
+		url('engineering_team.jpg');
+}
+
+#about8 {
+	background-image: url('resume.jpg');
+}
+#about8:hover {
+	background-image:
+		linear-gradient(
+			rgba(0, 0, 0, .6),
+			rgba(0, 0, 0, .6)
+		),
+		url('resume.jpg');
+}
+
+#about9 {
+	background-image: url('quote.jpeg');
+}
+#about9:hover {
+	background-image:
+		linear-gradient(
+			rgba(0, 0, 0, .6),
+			rgba(0, 0, 0, .6)
+		),
+		url('quote.jpeg');
+}
+
+#about10 {
+	background-image: url('inquiry.jpg');
+}
+#about10:hover {
+	background-image:
+		linear-gradient(
+			rgba(0, 0, 0, .6),
+			rgba(0, 0, 0, .6)
+		),
+		url('inquiry.jpg');
+}
+
+#about11 {
+	background-image: url('contact.jpg');
+}
+#about11:hover {
+	background-image:
+		linear-gradient(
+			rgba(0, 0, 0, .6),
+			rgba(0, 0, 0, .6)
+		),
+		url('contact.jpg');
+}
+
+.footer {
+	grid-column: 1 / -1;
+	grid-row-end: -1;
+	/*background-color: black;*/
+  color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 8888;
+}
+#name {
+	padding-left: 15px;
+}
